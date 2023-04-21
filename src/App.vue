@@ -3,6 +3,6 @@ import Docs from './components/Docs.vue';
 </script>
 
 <template>
-  <Docs />
+  <router-view></router-view>
 </template>
 

@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@takuma-ru/vue-swipe-modal": "4.0.0",
     "vue": "^3.2.47",
     "vue-document-editor": "^2.2.2",
     "vue-file-toolbar-menu": "^2.2.0",
