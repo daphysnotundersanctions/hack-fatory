@@ -1,6 +1,6 @@
 <template>
     <div class="card">
-        <img src="../assets/icons/doc.svg" alt="">
+        <img src="../../public/icons/doc.svg" alt="">
         <div class="card__block">
             <div>
                 {{ cardTitle }}

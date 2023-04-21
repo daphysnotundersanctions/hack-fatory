@@ -17,18 +17,26 @@
     <Card :cardImg="mock.img" :cardTitle="mock.title" />
   </template>
 </template>
-<script setup>
-import { ref } from "vue";
+<script >
 import swipeModal from '@takuma-ru/vue-swipe-modal'
 import UiCard from "../components/ui-kit/UiCard.vue";
 import StageCard from "../components/StageCard.vue";
 import Card from "../components/Card.vue";
-const isModal = ref(false)
-
-const mockCard = [
-  {
-    title : 'Машины и механизмы',
-    img : 'robothed.svg',
+export default {
+  components : {
+    swipeModal, UiCard, StageCard, Card
+  },
+  data() {
+    return {
+      isModal : false,
+      mockCard :[
+       {
+        title : 'Машины и механизмы',
+        img : 'robothed',
+      }
+    ]
   }
-]
+}
+}
+
 </script>
