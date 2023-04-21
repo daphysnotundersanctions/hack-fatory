@@ -7,6 +7,19 @@
   resolved "https://registry.yarnpkg.com/@babel/parser/-/parser-7.21.4.tgz#94003fdfc520bbe2875d4ae557b43ddb6d880f17"
   integrity sha512-alVJj7k7zIxqBZ7BTRhz0IqJFxW1VJbm6N8JbcYhQ186df9ZBPbZBmWSqAMXwHGsCJdYks7z/voa3ibiS5bCIw==
 
+"@ckpack/vue-color@^1.2.4":
+  version "1.4.1"
+  resolved "https://registry.yarnpkg.com/@ckpack/vue-color/-/vue-color-1.4.1.tgz#d08c50755b2a731eb33d91b84b5997b98062ddc5"
+  integrity sha512-PPon4lIyKWgwexN4Gf8iRzqWVPWTa1nMoW37cKQbMakY/iBPiPzOtgGinNhD44STbv6GUnPLBCg6yfkXsPuFpw==
+  dependencies:
+    "@ctrl/tinycolor" "^3.6.0"
+    material-colors "^1.2.6"
+
+"@ctrl/tinycolor@^3.6.0":
+  version "3.6.0"
+  resolved "https://registry.yarnpkg.com/@ctrl/tinycolor/-/tinycolor-3.6.0.tgz#53fa5fe9c34faee89469e48f91d51a3766108bc8"
+  integrity sha512-/Z3l6pXthq0JvMYdUFyX9j0MaCltlIn6mfh9jLyQwg5aPKxkyNa0PTHtU1AlFXLNk55ZuAeJRcpvq+tmLfKmaQ==
+
 "@esbuild/android-arm64@0.17.17":
   version "0.17.17"
   resolved "https://registry.yarnpkg.com/@esbuild/android-arm64/-/android-arm64-0.17.17.tgz#164b054d58551f8856285f386e1a8f45d9ba3a31"
@@ -164,6 +177,11 @@
     "@vue/compiler-dom" "3.2.47"
     "@vue/shared" "3.2.47"
 
+"@vue/devtools-api@^6.4.5":
+  version "6.5.0"
+  resolved "https://registry.yarnpkg.com/@vue/devtools-api/-/devtools-api-6.5.0.tgz#98b99425edee70b4c992692628fa1ea2c1e57d07"
+  integrity sha512-o9KfBeaBmCKl10usN4crU53fYtC1r7jJwdGKjPT24t348rHxgfpZ0xL3Xm/gLUYnc0oTp8LAmrxOeLyu6tbk2Q==
+
 "@vue/reactivity-transform@3.2.47":
   version "3.2.47"
   resolved "https://registry.yarnpkg.com/@vue/reactivity-transform/-/reactivity-transform-3.2.47.tgz#e45df4d06370f8abf29081a16afd25cffba6d84e"
@@ -255,6 +273,16 @@ fsevents@~2.3.2:
   resolved "https://registry.yarnpkg.com/fsevents/-/fsevents-2.3.2.tgz#8a526f78b8fdf4623b709e0b975c52c24c02fd1a"
   integrity sha512-xiqMQR4xAeHTuB9uWm+fFRcIOgKBMiOBP+eXiyT7jsgVCq1bkVygt00oASowB7EdtpOHaaPgKt812P9ab+DDKA==
 
+hotkeys-js@^3.10.0:
+  version "3.10.2"
+  resolved "https://registry.yarnpkg.com/hotkeys-js/-/hotkeys-js-3.10.2.tgz#cf52661904f5a13a973565cb97085fea2f5ae257"
+  integrity sha512-Z6vLmJTYzkbZZXlBkhrYB962Q/rZGc/WHQiyEGu9ZZVF7bAeFDjjDa31grWREuw9Ygb4zmlov2bTkPYqj0aFnQ==
+
+lodash@^4.17.21:
+  version "4.17.21"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.21.tgz#679591c564c3bffaae8454cf0b3df370c3d6911c"
+  integrity sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==
+
 magic-string@^0.25.7:
   version "0.25.9"
   resolved "https://registry.yarnpkg.com/magic-string/-/magic-string-0.25.9.tgz#de7f9faf91ef8a1c91d02c2e5314c8277dbcdd1c"
@@ -262,10 +290,27 @@ magic-string@^0.25.7:
   dependencies:
     sourcemap-codec "^1.4.8"
 
+material-colors@^1.2.6:
+  version "1.2.6"
+  resolved "https://registry.yarnpkg.com/material-colors/-/material-colors-1.2.6.tgz#6d1958871126992ceecc72f4bcc4d8f010865f46"
+  integrity sha512-6qE4B9deFBIa9YSpOc9O0Sgc43zTeVYbgDT5veRKSlB2+ZuHNoVVxA1L/ckMUayV9Ay9y7Z/SZCLcGteW9i7bg==
+
+material-icons@^1.12.0:
+  version "1.13.5"
+  resolved "https://registry.yarnpkg.com/material-icons/-/material-icons-1.13.5.tgz#a16adfea9a5db602d3acae64adeb1c55b8bcf84f"
+  integrity sha512-LIgq4E21ifLiEsBY+44OSZNvsZHLTnFMrYsFDTfS6wovo9kpABnDTfYwJxAqPr1cL5YLZyf2nWoYUR/dNZp/Ow==
+
 nanoid@^3.3.6:
   version "3.3.6"
   resolved "https://registry.yarnpkg.com/nanoid/-/nanoid-3.3.6.tgz#443380c856d6e9f9824267d960b4236ad583ea4c"
   integrity sha512-BGcqMMJuToF7i1rt+2PWSNVnWIkGCU78jBG3RxO/bZlnZPK2Cmi2QaffxGO/2RvWi9sL+FAiRiXMgsyxQ1DIDA==
+
+node-emoji@^1.11.0:
+  version "1.11.0"
+  resolved "https://registry.yarnpkg.com/node-emoji/-/node-emoji-1.11.0.tgz#69a0150e6946e2f115e9d7ea4df7971e2628301c"
+  integrity sha512-wo2DpQkQp7Sjm2A0cq+sN7EHKO6Sl0ctXeBdFZrL9T9+UywORbufTcTZxom8YqpLQt/FqNMUkOpkZrJVYSKD3A==
+  dependencies:
+    lodash "^4.17.21"
 
 picocolors@^1.0.0:
   version "1.0.0"
@@ -313,6 +358,28 @@ vite@^4.3.0:
     rollup "^3.20.2"
   optionalDependencies:
     fsevents "~2.3.2"
+
+vue-document-editor@^2.2.2:
+  version "2.2.2"
+  resolved "https://registry.yarnpkg.com/vue-document-editor/-/vue-document-editor-2.2.2.tgz#88c6c086f5207a1b55825f7d2126a71fc0a689c9"
+  integrity sha512-fUW+y4yJBMLR1gUeFJxO5hIi/HZUT06gVi49OSMumd9Hbl9xUDkT/ICqH6+N9kFoMCp3OyHhdEQh7pih8ohL9w==
+
+vue-file-toolbar-menu@^2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/vue-file-toolbar-menu/-/vue-file-toolbar-menu-2.2.0.tgz#a1a4031e417313e6717278218d6ce48fee261f48"
+  integrity sha512-p5jhHp1MuDwzbYibX1VwXvmyUxQlwD5sY2Al+GcG5PHcFMwib1xjBDTnbhtxxNXm4THf1BjdkmZfrh/l6ppA9w==
+  dependencies:
+    "@ckpack/vue-color" "^1.2.4"
+    hotkeys-js "^3.10.0"
+    material-icons "^1.12.0"
+    node-emoji "^1.11.0"
+
+vue-router@4:
+  version "4.1.6"
+  resolved "https://registry.yarnpkg.com/vue-router/-/vue-router-4.1.6.tgz#b70303737e12b4814578d21d68d21618469375a1"
+  integrity sha512-DYWYwsG6xNPmLq/FmZn8Ip+qrhFEzA14EI12MsMgVxvHFDYvlr4NXpVF5hrRH1wVcDP8fGi5F4rxuJSl8/r+EQ==
+  dependencies:
+    "@vue/devtools-api" "^6.4.5"
 
 vue@^3.2.47:
   version "3.2.47"
