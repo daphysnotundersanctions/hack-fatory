@@ -13,9 +13,9 @@
         <StageCard cardTitle="Жопа" cardTime="14 неделя" cardStatus="Выполнено" cardDates="с 14 по 28 марта " />
     </template>
   </div>
-  <template v-for="(mock,id) in mockCard">
+  <!-- <template v-for="(mock,id) in mockCard">
     <Card :cardImg="mock.img" :cardTitle="mock.title" />
-  </template>
+  </template> -->
 </template>
 <script >
 import swipeModal from '@takuma-ru/vue-swipe-modal'

@@ -1,9 +1,7 @@
 <template>
   <div class="main">
-    <!-- Top bar -->
     <vue-file-toolbar-menu :content="menu" class="bar" />
 
-    <!-- Document editor -->
     <vue-document-editor
       class="editor"
       ref="editor"
@@ -15,7 +13,30 @@
       :display="display"
     />
 
-    <button @click="translate()">Translate</button>
+    <button @click="modalState = true" class="button">
+      <img src="/icons/translate.png" alt="">
+    </button>
+
+    <swipe-modal
+      v-model="modalState"
+      contents-height="50vh"
+      border-top-radius="16px"
+    >
+      <div class="buttonsList">
+        <button @click="modalChoser('kaz_Cyrl')" class="button__lang"> 
+          <img src="/icons/kazah.png" alt="">
+          <p>
+            Казахский
+          </p>
+        </button>
+        <button @click="modalChoser('kir_Cyrl')" class="button__lang">
+          <img src="/icons/stan.png" alt="">
+          Киргизский</button>
+        <button @click="modalChoser('uzn_Latn')" class="button__lang">
+          <img src="/icons/uzbek.png" width="43" height="43" alt="">
+          Узбекский</button>
+      </div>
+    </swipe-modal>
   </div>
 </template>
 
@@ -23,21 +44,26 @@
 import VueFileToolbarMenu from "vue-file-toolbar-menu";
 import VueDocumentEditor from "vue-document-editor";
 import NLPCloudClient from 'nlpcloud';
+import Card from '../components/Card.vue'
+import swipeModal from '@takuma-ru/vue-swipe-modal'
 
 export default {
-  components: { VueDocumentEditor, VueFileToolbarMenu },
+  components: { VueDocumentEditor, VueFileToolbarMenu , swipeModal, Card },
 
   data() {
     return {
       // This is where the pages content is stored and synced
       content: [
-        "Пример документа"
+        "Переведи меня !"
       ],
+      modalState : false,
+      chosenLang : '',
+      chosedLang : 'rus_Cyrl',
       translatedContent : [],
       zoom: 0.8,
       zoom_min: 0.1,
       zoom_max: 5.0,
-      page_format_mm: [210, 297],
+      page_format_mm: [110, 297],
       page_margins: "10mm 15mm",
       display: "grid", // ["grid", "vertical", "horizontal"]
       mounted: false, // will be true after this component is mounted
@@ -551,8 +577,15 @@ export default {
 
   methods: {
     // Page overlays (headers, footers, page numbers)
+    modalChoser(i) {
+      this.chosenLang = i;
+      this.translate()
+      this.modalState = false;
+      this.chosedLang = i
+    },
     translate() {
       // console.log(this.$refs.editor.$data.pages[0].prev_innerHTML);
+        this.modalState = true;
         this.content[0] = this.$refs.editor.$data.pages[0].prev_innerHTML 
         const client = new NLPCloudClient(
           "nllb-200-3-3b",
@@ -563,8 +596,8 @@ export default {
         client
           .translation(
             this.content[0],
-            "rus_Cyrl",
-            "kaz_Cyrl"
+            this.chosedLang,
+            this.chosenLang
           )
           .then((response) => {
               // this.translatedContent.push(response.data.translation_text);
@@ -678,9 +711,9 @@ export default {
     },
   },
 };
-</script>
+</script >
 
-<style>
+<style scoped>
 html {
   height: 100%;
 }
@@ -729,5 +762,39 @@ body {
   --bar-button-open-color: #188038;
   --bar-button-active-bkg: #e6f4ea;
   --bar-button-open-bkg: #e6f4ea;
+}
+.button {
+  position: fixed;
+  bottom: 10px;
+  left: 30px;
+  background: #008BD8;
+  border-radius: 10px;
+  border: 0;
+  max-width: fit-content;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  color: white;
+  font-size: 21px;
+  justify-content: space-between;
+  padding: 10px;
+}
+.buttonsList {
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px;
+  gap: 20px;
+}
+.button__lang {
+  background: white;
+  border-radius: 10px;
+  font-size: 18px;
+  border: 1px solid black;
+  padding: 10px;
+  color: rgb(66, 60, 60);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
 }
 </style>
