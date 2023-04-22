@@ -17,3 +17,7 @@ async def getCodesList():
 @app.post("/sendMessage/")
 async def postMessage(item : Item):
     return insertToPerformers(item)
+
+@app.post("/addDocument")
+async def postDocument():
+    return 
