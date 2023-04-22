@@ -1,5 +1,5 @@
 <template>
-    <router-link style="text-decoration: none;" :to="cardRoute">
+    <router-link style="text-decoration: none;" :to="cardRoute ? cardRoute : '/'">
         <div class="machine">
             <img :src="`../public/icons/${cardImg}.svg`" alt="">
             <p>
