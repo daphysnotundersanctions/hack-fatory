@@ -1,7 +1,7 @@
 <template >
     <div>
-        <h1>Первый спринт</h1>
-        <p>14 неделя проекта</p>
+        <h1>Первый спринт
+        <p>14 неделя проекта</p></h1>
         <div class="container">
             <template v-for="(mock, id) in mockCard">
                 <Card :cardImg="mock.img" :cardTitle="mock.title" />
@@ -45,7 +45,7 @@ export default {
     }
 }
 </script>
-<style>
+<style scoped>
 .container {
     margin-top: 30px;
 
@@ -54,6 +54,7 @@ export default {
 p {
     font-weight: 500;
     font-size: 15px;
-    
+    color: rgba(0, 0, 0, 0.6);
+    padding-top: 10px;
 }
 </style>

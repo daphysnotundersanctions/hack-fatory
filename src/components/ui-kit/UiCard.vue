@@ -8,7 +8,7 @@ export default {
     name : 'UiCard',
 }
 </script>
-<style>
+<style scoped>
 .ui-card {
     background: #FFFFFF;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.04);

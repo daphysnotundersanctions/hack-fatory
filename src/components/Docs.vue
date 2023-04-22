@@ -375,7 +375,7 @@
   }
   </script>
   
-  <style>
+  <style scoped>
   html {
     height: 100%;
   }

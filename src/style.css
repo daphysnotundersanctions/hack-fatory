@@ -3,8 +3,29 @@
   margin: 0;
   padding: 0;
 }
+body {
+  max-width: 400px;
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  width: 100%;
+  margin: auto;
+  min-height: 100vh;
+}
 
 h1{
   font-size: 28px;
   font-weight: 600;
+  margin-bottom: 30px;
+  margin-left: 25px;
+  padding-top: 30px;
+}
+
+#app {
+  background: rgba(239, 241, 243, 1);
+  height: 100vh;
+}
+
+.mt30 {
+  padding-top: 30px;
 }

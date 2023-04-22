@@ -12,6 +12,8 @@ import M4 from './views/M4.vue'
 import Check from './views/Check.vue'
 import Sprint from './views/Sprint.vue'
 import Dogovor from './views/Dogovor.vue'
+import nameproject from './views/nameproject.vue'
+import stateproject from './views/stateproject.vue'
 
 const router = createRouter({
     history: createWebHistory(),
@@ -26,6 +28,8 @@ const router = createRouter({
         {path : '/check', name : 'Check', component : Check},
         {path : '/sprint', name : 'Sprint', component : Sprint},
         {path : '/dogovor', name : 'Dogovor', component : Dogovor},
+        {path : '/nameproject', name: 'nameproject', component : nameproject},
+        {path : '/stateproject', name: 'stateproject', component : stateproject},
     ]
 })
 

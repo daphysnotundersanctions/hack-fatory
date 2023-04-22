@@ -26,30 +26,29 @@ export default {
     props: ['cardTitle', 'cardTime', 'cardDates', 'cardStatus']
 }
 </script>
-<style>
+<style scoped>
 .card {
     display: flex;
     align-items: flex-start;
     padding: 24px 20px;
-    gap: 8px;
-    max-width: 348px;
+    gap: 21px;
+    max-width: 384px;
+    margin: auto;
+    margin-bottom: 8px;
     width: 100%;
-    background: rgba(255, 255, 255, 0.6);
+    background: rgb(255, 255, 255);
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.04);
     border-radius: 8px;
 }
 
 .card__block {
     display: flex;
-    gap: 4px;
+    gap: 6px;
     flex-direction: column;
 }
 .card__row {
     display: flex;
-    gap: 13px;
-}
-p {
+    gap: 8px;
     font-size: 13px;
 }
-
 </style>
