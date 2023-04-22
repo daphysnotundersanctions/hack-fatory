@@ -14,6 +14,7 @@ import Sprint from './views/Sprint.vue'
 import Dogovor from './views/Dogovor.vue'
 import nameproject from './views/nameproject.vue'
 import stateproject from './views/stateproject.vue'
+import week from './views/week.vue'
 
 const router = createRouter({
     history: createWebHistory(),
@@ -30,6 +31,7 @@ const router = createRouter({
         {path : '/dogovor', name : 'Dogovor', component : Dogovor},
         {path : '/nameproject', name: 'nameproject', component : nameproject},
         {path : '/stateproject', name: 'stateproject', component : stateproject},
+        {path : '/week', name: 'week', component: week},
     ]
 })
 
