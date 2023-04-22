@@ -6,12 +6,14 @@
                 <Card :cardImg="mock.img" :cardTitle="mock.title" />
             </template>
         </div>
+        <UiCalendar />
     </div>
 </template>
 <script>
 import Card from "../components/Card.vue";
+import UiCalendar from "../components/ui-kit/UiCalendar.vue";
 export default {
-    components : {Card},
+    components : { Card, UiCalendar },
     data() {
         return {
             mockCard: [
@@ -38,8 +40,5 @@ export default {
 }
 </script>
 <style scoped>
-    .container{
-        margin-top: 30px;
-
-    }
+    
 </style>

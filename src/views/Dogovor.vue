@@ -3,7 +3,7 @@
         <h1>Договора с СКЗМК</h1>
         <div class="container">
             <template v-for="(mock, id) in mockCard">
-                <Card :cardImg="mock.img" :cardTitle="mock.title" />
+                <Card :cardRoute="mock.route" :cardImg="mock.img" :cardTitle="mock.title" />
             </template>
         </div>
     </div>
@@ -17,7 +17,8 @@ export default {
             mockCard: [
                 {
                     title: 'М4 Дон 108 км.',
-                    img: 'm4'
+                    img: 'm4',
+                    route : '/m4'
                 },
                 {
                     title: 'М34 176 км.',

@@ -33,6 +33,10 @@ export default {
     max-width: 384px;
     align-items: center;
     justify-content: center;
+    padding-left: 8px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-right: 16px;
 }
 
 .machine p {

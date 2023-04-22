@@ -3,7 +3,7 @@
         <h1>Подготовка к выполнению</h1>
         <div class="container">
             <template v-for="(mock, id) in mockCard" >
-                <Card :cardImg="mock.img" :cardTitle="mock.title" />
+                <Card :cardRoute="mock.route" :cardImg="mock.img" :cardTitle="mock.title" />
             </template>
         </div>
     </div>
@@ -18,19 +18,23 @@ export default {
                 {
                     title: 'Договора с СКЗМК',
                     img: 'DocDoc',
+                    route : '/dogovor',
                 },
                 {
                     title: 'График работы',
-                    img: 'grahick'
+                    img: 'grahick',
+                    router : ''
 
                 },
                 {
                     title: 'Уведомления заказчику',
-                    img: 'notifications'
+                    img: 'notifications',
+                    route : ''
                 },
                 {
                     title: 'ТЗ на производство',
-                    img: 'assignment'
+                    img: 'assignment',
+                    route : '/tech'
                 },
             ]
         }
@@ -38,8 +42,7 @@ export default {
 }
 </script>
 <style scoped>
-    .container{
-        margin-top: 30px;
+    
 
-    }
+    
 </style>

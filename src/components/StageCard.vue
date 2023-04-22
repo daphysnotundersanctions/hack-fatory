@@ -1,6 +1,7 @@
 <template>
-    <div class="card">
-        <img src="../../public/icons/doc.svg" alt="">
+    <router-link style="text-decoration: none;" :to="cardRoute ? cardRoute : '/'">
+        <div class="card">
+            <img src="../../public/icons/doc.svg" alt="">
         <div class="card__block">
             <div>
                 {{ cardTitle }}
@@ -20,10 +21,11 @@
             </div>
         </div>
     </div>
+</router-link>
 </template>
 <script>
 export default {
-    props: ['cardTitle', 'cardTime', 'cardDates', 'cardStatus']
+    props: ['cardTitle', 'cardTime', 'cardDates', 'cardStatus', 'cardRoute']
 }
 </script>
 <style scoped>

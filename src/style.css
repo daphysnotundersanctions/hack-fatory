@@ -29,3 +29,8 @@ h1{
 .mt30 {
   padding-top: 30px;
 }
+
+.container { 
+  margin-top: 30px;
+  margin: 0 8px;
+}

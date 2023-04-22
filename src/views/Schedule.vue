@@ -34,8 +34,5 @@ export default {
 }
 </script>
 <style>
-    .container{
-        margin-top: 30px;
-
-    }
+    
 </style>
