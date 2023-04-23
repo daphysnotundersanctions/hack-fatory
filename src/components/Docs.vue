@@ -14,7 +14,7 @@
     />
 
     <button @click="modalState = true" class="button">
-      <img src="/icons/translate.png" alt="">
+      <img src="/icons/translate.png" alt="" />
     </button>
 
     <swipe-modal
@@ -23,18 +23,14 @@
       border-top-radius="16px"
     >
       <div class="buttonsList">
-        <button @click="modalChoser('kaz_Cyrl')" class="button__lang"> 
-          <img src="/icons/kazah.png" alt="">
-          <p>
-            Казахский
-          </p>
+        <button @click="modalChoser('kaz_Cyrl')" class="button__lang">
+          <img src="/icons/kazah.png" alt="" />
+          <p>Казахский</p>
         </button>
         <button @click="modalChoser('kir_Cyrl')" class="button__lang">
-          <img src="/icons/stan.png" alt="">
-          Киргизский</button>
-        <button @click="modalChoser('uzn_Latn')" class="button__lang">
-          <img src="/icons/uzbek.png" width="43" height="43" alt="">
-          Узбекский</button>
+          <img src="/icons/stan.png" alt="" />
+          Киргизский
+        </button>
       </div>
     </swipe-modal>
   </div>
@@ -43,23 +39,23 @@
 <script>
 import VueFileToolbarMenu from "vue-file-toolbar-menu";
 import VueDocumentEditor from "vue-document-editor";
-import NLPCloudClient from 'nlpcloud';
-import Card from '../components/Card.vue'
-import swipeModal from '@takuma-ru/vue-swipe-modal'
+import NLPCloudClient from "nlpcloud";
+import Card from "../components/Card.vue";
+import swipeModal from "@takuma-ru/vue-swipe-modal";
 
 export default {
-  components: { VueDocumentEditor, VueFileToolbarMenu , swipeModal, Card },
+  components: { VueDocumentEditor, VueFileToolbarMenu, swipeModal, Card },
 
   data() {
     return {
       // This is where the pages content is stored and synced
       content: [
-        "Переведи меня !"
+        "Договор подряда № {Номер Документа} {Дата Документа) {Название) именуемое в дальнейшем «Заказчик», в лице, действующего на основании Устава и тд.",
       ],
-      modalState : false,
-      chosenLang : '',
-      chosedLang : 'rus_Cyrl',
-      translatedContent : [],
+      modalState: false,
+      chosenLang: "",
+      chosedLang: "rus_Cyrl",
+      translatedContent: [],
       zoom: 0.8,
       zoom_min: 0.1,
       zoom_max: 5.0,
@@ -579,35 +575,31 @@ export default {
     // Page overlays (headers, footers, page numbers)
     modalChoser(i) {
       this.chosenLang = i;
-      this.translate()
+      this.translate();
       this.modalState = false;
-      this.chosedLang = i
+      this.chosedLang = i;
     },
     translate() {
       // console.log(this.$refs.editor.$data.pages[0].prev_innerHTML);
-        this.modalState = true;
-        this.content[0] = this.$refs.editor.$data.pages[0].prev_innerHTML 
-        const client = new NLPCloudClient(
-          "nllb-200-3-3b",
-          "2f490a9b5635c5200b0c0fea608ee19e8f3ab4b9",
-          false
-        );
+      this.modalState = true;
+      this.content[0] = this.$refs.editor.$data.pages[0].prev_innerHTML;
+      const client = new NLPCloudClient(
+        "nllb-200-3-3b",
+        "2f490a9b5635c5200b0c0fea608ee19e8f3ab4b9",
+        false
+      );
 
-        client
-          .translation(
-            this.content[0],
-            this.chosedLang,
-            this.chosenLang
-          )
-          .then((response) => {
-              // this.translatedContent.push(response.data.translation_text);
-              this.content[0] = response.data.translation_text;
-              // this.$refs.editor.$data.pages[0].prev_innerHTML.value = response.data.translation_text;
-              console.log(response);
-          })
-          .catch((err) => {
-            console.error(err);
-          });
+      client
+        .translation(this.content[0], this.chosedLang, this.chosenLang)
+        .then((response) => {
+          // this.translatedContent.push(response.data.translation_text);
+          this.content[0] = response.data.translation_text;
+          // this.$refs.editor.$data.pages[0].prev_innerHTML.value = response.data.translation_text;
+          console.log(response);
+        })
+        .catch((err) => {
+          console.error(err);
+        });
     },
     overlay(page, total) {
       // Add page numbers on each page
@@ -711,7 +703,7 @@ export default {
     },
   },
 };
-</script >
+</script>
 
 <style scoped>
 html {
@@ -767,7 +759,7 @@ body {
   position: fixed;
   bottom: 10px;
   left: 30px;
-  background: #008BD8;
+  background: #008bd8;
   border-radius: 10px;
   border: 0;
   max-width: fit-content;

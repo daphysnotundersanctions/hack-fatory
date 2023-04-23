@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Договора с СКЗМК</h1>
+    <h1>Техническое задание</h1>
     <div class="container">
       <template v-for="(mock, id) in mockCard">
         <Card
@@ -20,9 +20,9 @@ export default {
     return {
       mockCard: [
         {
-          title: "М4 Дон 108 км.",
-          img: "m4",
-          route: "/m4",
+          title: "Прил. №1 к контракту Техническое задание",
+          img: "docTZ",
+          route: "/doc",
         },
       ],
     };
