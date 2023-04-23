@@ -1,10 +1,10 @@
 <template>
     <div class="machine">
-        <img :src="`../public/icons/${cardImg}.svg`" alt="">
+        <img :src="`/icons/${cardImg}.svg`" alt="">
         <p>
             {{ cardTitle }}
         </p>
-        <img src="../../public/icons/chevron_right.svg" alt="">
+        <img src="/icons/chevron_right.svg" alt="">
     </div>
 </template>
 

@@ -1,11 +1,10 @@
 import { createApp } from 'vue'
-import { createRouter,createWebHistory } from 'vue-router'
+import { createRouter, createWebHistory } from 'vue-router'
 import './style.css'
 import App from './App.vue'
 import List from './views/List.vue'
 import Docs from './views/Docs.vue'
 import Doc from './views/Doc.vue'
-import Test from './views/Test.vue'
 import Tech from './views/Tech.vue'
 import Schedule from './views/Schedule.vue'
 import Preparation from './views/Preparation.vue'
@@ -29,7 +28,6 @@ import M5 from './views/M5.vue'
 const router = createRouter({
     history: createWebHistory(),
     routes : [
-        {path : '/test', name : 'Test', component : Test},
         {path : '/list', name : 'List', component : List},
         {path : '/docs', name : 'Docs', component : Docs},
         {path : '/doc', name : 'Doc', component : Doc},

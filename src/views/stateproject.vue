@@ -42,7 +42,7 @@ export default {
           icon: "check",
           status: "В процессе",
           dates: "с 14 по 28 марта",
-          route: "",
+          route: "/preparation",
         },
         {
           title: "Первый спринт",
@@ -50,7 +50,7 @@ export default {
           status: "Запланировано",
           icon: "wifi",
           dates: "с 14 по 28 марта",
-          route: "",
+          route: "/preparation",
         },
         {
           title: "Второй спринт",
@@ -58,7 +58,7 @@ export default {
           status: "Запланировано",
           icon: "wifi",
           dates: "с 14 по 28 марта",
-          route: "",
+          route: "/preparation",
         },
         {
           title: "Сдача выполненных СМР",
@@ -66,7 +66,7 @@ export default {
           icon: "done",
           status: "Запланировано",
           dates: "с 3 по 8 апреля",
-          route: "",
+          route: "/preparation",
         },
       ],
     };
