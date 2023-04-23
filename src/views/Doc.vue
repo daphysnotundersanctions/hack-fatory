@@ -2,7 +2,7 @@
   <div>
     <h1>Прил. №1 к контракту Техническое задание</h1>
     <div class="container">
-      <img src="/public/img/doc.png" width="364" alt="" />
+      <img src="/img/doc.png" width="364" alt="" />
     </div>
   </div>
 </template>
