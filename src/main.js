@@ -21,6 +21,10 @@ import Dogovors from './views/Dogovors.vue'
 import Graphic from './views/Graphic.vue'
 import Personal from './views/Personal.vue'
 import Cmp from './views/CMP.vue'
+import M1 from './views/M1.vue'
+import M2 from './views/M2.vue'
+import M3 from './views/M3.vue'
+import M5 from './views/M5.vue'
 
 const router = createRouter({
     history: createWebHistory(),
@@ -45,6 +49,10 @@ const router = createRouter({
         {path : '/graphic', name: 'Graphic', component: Graphic},
         {path : '/personal', name: 'Personal', component: Personal},
         {path : '/cmp', name: 'CMP', component: Cmp},
+        {path : '/M1', name: 'm1', component: M1},
+        {path : '/M2', name: 'm2', component: M2},
+        {path : '/M3', name: 'm3', component: M3},
+        {path : '/M5', name: 'm5', component: M5},
     ]
 })
 

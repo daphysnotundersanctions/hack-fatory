@@ -29,7 +29,7 @@ export default {
   width: 100%;
   margin: auto;
   margin-bottom: 8px;
-  height: 56px;
+  min-height: 56px;
   max-width: 384px;
   align-items: center;
   justify-content: center;
