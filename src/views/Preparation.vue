@@ -30,7 +30,7 @@ export default {
         {
           title: "График работы",
           img: "grahick",
-          route: "/dogovor",
+          route: "/cmp",
         },
         {
           title: "Уведомления заказчику",

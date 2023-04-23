@@ -191,12 +191,17 @@ export default {
 </script>
 <style scoped>
 .ui-calendar {
+  max-width: 385px;
+  width: 100%;
+  margin: 0 auto;
 }
 .ui-calendar__header {
   background: #ffffff;
   border-bottom: 0.5px solid #cccccc;
   display: flex;
   justify-content: center;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
   gap: 75px;
   padding: 12px 16px;
   align-items: center;
