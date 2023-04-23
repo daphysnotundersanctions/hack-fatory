@@ -19,12 +19,15 @@
     <div class="ui-calendar__body">
       <template v-for="data in dataSet">
         <div
-          @click="isModal = true"
+          @click="choseDate(data)"
           class="ui-calendar__block"
           style="height: 36px"
-          :class="
-            data.value ? 'ui-calendar__block--blue' : 'ui-calendar__block'
-          "
+          :class="[
+            data.value && !data.problem
+              ? 'ui-calendar__block--blue'
+              : 'ui-calendar__block',
+            data.problem && data.value ? 'ui-calendar__block--prob' : '',
+          ]"
         >
           <!-- {{ data.value }} -->
         </div>
@@ -33,10 +36,28 @@
   </div>
   <swipe-modal
     v-model="isModal"
-    contents-height="50vh"
+    contents-height="55vh"
     border-top-radius="16px"
   >
-    <p>contents</p>
+    <div>
+      <div class="ui-calendar__modal">
+        <img
+          v-if="chosenDate.img"
+          width="250"
+          class="ui-calendar__img"
+          :src="`/img/${chosenDate.img}`"
+        />
+        <h1>
+          {{ chosenDate.name }}
+        </h1>
+        <p>
+          {{ chosenDate.prof }}
+        </p>
+        <h3 style="margin-top: 25px">{{ chosenDate.did }}</h3>
+        <h2 v-if="chosenDate.problem">{{ chosenDate.problem }}</h2>
+        <h1 v-if="chosenDate.noWork">{{ chosenDate.noWork }}</h1>
+      </div>
+    </div>
   </swipe-modal>
 </template>
 
@@ -46,39 +67,139 @@ export default {
   components: {
     swipeModal,
   },
+  methods: {
+    choseDate(i) {
+      if (Object.keys(i).length > 0) {
+        (this.chosenDate = i)((this.isModal = true));
+      } else {
+        alert("Сегодня никто не работал :(");
+      }
+    },
+  },
   data() {
     return {
       datesRow: [12, 13, 14, 15, 16, 17, 18],
+      chosenDate: {},
       isModal: false,
       dataSet: [
         {},
-        { value: "2" },
-        { value: "3" },
-        { value: "4" },
-        { value: "5" },
+        {
+          value: "2",
+          name: "Василий Васев",
+          prof: "Укладчик кирпичей / Строитель",
+          did: "Работал с 12:00 до 15:00",
+          img: "pic2.jpg",
+        },
+        {
+          value: "3",
+          name: "Василий Васев",
+          did: "Работал с 12:00 до 15:00",
+          img: "pic1.jpeg",
+          prof: "Укладчик кирпичей / Строитель",
+        },
         {},
-        { value: "7" },
-        { value: "1" },
-        { value: "2" },
-        { value: "3" },
-        { value: "4" },
-        { value: "5" },
-        { value: "6" },
-        { value: "7" },
-        { value: "1" },
-        { value: "2" },
-        { value: "3" },
-        { value: "4" },
-        { value: "5" },
-        { value: "6" },
-        { value: "7" },
-        { value: "1" },
-        { value: "2" },
-        { value: "3" },
-        { value: "4" },
-        { value: "5" },
-        { value: "6" },
-        { value: "" },
+        {},
+        {},
+        {},
+        {
+          value: "1",
+          name: "Василий Васев",
+          prof: "Укладчик кирпичей / Строитель",
+          did: "Работал с 12:00 до 15:00",
+          problem: "Шёл дождь",
+          img: "",
+        },
+        {
+          value: "2",
+          name: "Василий Васев",
+          prof: "Укладчик кирпичей / Строитель",
+          problem: "Шёл дождь",
+          did: "Работал с 12:00 до 15:00",
+          img: "",
+        },
+        {},
+        {
+          value: "4",
+          name: "Василий Васев",
+          did: "Работал с 12:00 до 15:00",
+          prof: "Укладчик кирпичей / Строитель",
+          img: "",
+        },
+        {},
+        {
+          value: "6",
+          name: "Василий Васев",
+          prof: "Укладчик кирпичей / Строитель",
+          did: "Работал с 12:00 до 15:00",
+          problem: "Шёл дождь",
+          img: "pic2.jpg",
+        },
+        {
+          value: "7",
+          name: "Василий Васев",
+          did: "Работал с 12:00 до 15:00",
+          prof: "Укладчик кирпичей / Строитель",
+          problem: "Шёл дождь",
+          img: "",
+        },
+        {},
+        {
+          value: "2",
+          name: "Василий Васев",
+          prof: "Укладчик кирпичей / Строитель",
+          problem: "Шёл дождь",
+          did: "Работал с 12:00 до 15:00",
+          img: "",
+        },
+        {
+          value: "3",
+          name: "Василий Васев",
+          prof: "Укладчик кирпичей / Строитель",
+          problem: "Шёл дождь",
+          did: "Работал с 12:00 до 15:00",
+          img: "",
+        },
+        {},
+        {},
+        {
+          value: "6",
+          name: "Василий Васев",
+          prof: "Укладчик кирпичей / Строитель",
+          img: "",
+          did: "Работал с 12:00 до 15:00",
+        },
+        {},
+        {},
+        {
+          value: "2",
+          name: "Василий Васев",
+          prof: "Укладчик кирпичей / Строитель",
+          did: "Работал с 12:00 до 15:00",
+          img: "",
+        },
+        {
+          value: "3",
+          name: "Василий Васев",
+          prof: "Укладчик кирпичей / Строитель",
+          did: "Работал с 12:00 до 15:00",
+          img: "",
+        },
+        {
+          value: "4",
+          name: "Василий Васев",
+          did: "Работал с 12:00 до 15:00",
+          prof: "Укладчик кирпичей / Строитель",
+          img: "",
+        },
+        {},
+        {
+          value: "6",
+          name: "Василий Васев",
+          did: "Работал с 12:00 до 15:00",
+          prof: "Укладчик кирпичей / Строитель",
+          img: "",
+        },
+        {},
       ],
     };
   },
@@ -101,6 +222,9 @@ export default {
 }
 .ui-calendar__block {
   text-align: center;
+  border-width: 0px 0.5px 0.5px 0px;
+  border-style: solid;
+  border-color: #cccccc;
   max-width: 55px;
   width: 100%;
   background: #ffffff;
@@ -114,5 +238,20 @@ export default {
 }
 .ui-calendar__block--blue {
   background-color: #d3eaff;
+}
+.ui-calendar__block--prob {
+  background-color: #ff7878;
+}
+.ui-calendar__modal {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.ui-calendar__modal h1 {
+  margin: 0;
+}
+.ui-calendar__img {
+  border-radius: 50%;
+  margin-top: 10px;
 }
 </style>
