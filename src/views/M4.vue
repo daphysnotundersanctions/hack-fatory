@@ -24,10 +24,12 @@ export default {
         {
           title: "Почта с СКЗМК",
           img: "mail",
+          router: "/dogovors",
         },
         {
           title: "Договор",
           img: "DocDoc",
+          router: "/dogovors",
         },
         {
           title: "Техническое задание",
@@ -37,6 +39,7 @@ export default {
         {
           title: "Акты, счета, счет фактуры",
           img: "certificate",
+          router: "/dogovors",
         },
       ],
     };

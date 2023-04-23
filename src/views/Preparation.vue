@@ -30,17 +30,17 @@ export default {
         {
           title: "График работы",
           img: "grahick",
-          router: "",
+          route: "/dogovor",
         },
         {
           title: "Уведомления заказчику",
           img: "notifications",
-          route: "",
+          route: "/dogovor",
         },
         {
           title: "ТЗ на производство",
           img: "assignment",
-          route: "/tech",
+          route: "/dogovor",
         },
       ],
     };

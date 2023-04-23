@@ -33,12 +33,12 @@ export default {
         {
           title: "График работ",
           img: "graphic",
-          route: "/stateproject",
+          route: "/cmp",
         },
         {
           title: "Документы для передачи СКЗМК",
           img: "docs",
-          route: "/stateproject",
+          route: "/doc",
         },
       ],
     };

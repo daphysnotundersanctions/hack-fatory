@@ -1,7 +1,7 @@
 <template>
   <router-link
     style="text-decoration: none; color: unset"
-    :to="cardRoute ? cardRoute : '/'"
+    :to="cardRoute ? cardRoute : ''"
   >
     <div class="machine">
       <img :src="`../public/icons/${cardImg}.svg`" alt="" />
